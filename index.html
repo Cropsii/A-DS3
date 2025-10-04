@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap" id="generator">
+      <div class="wrap" id="manualTask">
+        <form class="column">
+          <div class="flex">
+            <legend>Создать задачу</legend>
+            <button type="button" id="close">&times;</button>
+          </div>
+          <label for="arrivalTime">Время начала работы</label>
+          <input type="number" name="arrivalTime" min="0" />
+
+          <label for="timeP0">Время первого процессора</label>
+          <input type="number" name="timeP0" min="0" />
+
+          <label for="timeP1">Время второго процессора</label>
+          <input type="number" name="timeP1" min="0" />
+          <button type="submit">Добавить</button>
+        </form>
+      </div>
+
+      <legend>Добавить задачу</legend>
+      <button id="manual">Вручную</button>
+      <button id="auto">Автоматически</button>
+      <hr />
+      <div id="waiting"></div>
+    </div>
+    <div id="processFlow" class="column">
+      <div class="wrap queue">
+        <legend>Очередь</legend>
+        <input
+          type="number"
+          placeholder="Размер 5"
+          min="1"
+          id="queueLengthInput"
+        />
+        <hr />
+        <div id="queue"></div>
+      </div>
+
+      <div class="process">
+        <span>P0</span>
+        <hr />
+        <div id="P0"></div>
+      </div>
+      <div class="wrap stack" >
+        <legend>Стек</legend>
+        <hr />
+        <div id="stack"></div>
+      </div>
+
+      <div class="process">
+        <span>P1</span>
+        <hr />
+        <div id="P1"></div>
+      </div>
+    </div>
+    <button id="step">Шаг</button>
+  </body>
+</html>
