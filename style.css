@@ -67,3 +67,42 @@ body {
 #manualTask.show {
   display: block;
 }
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .column {
+    align-items: center;
+
+    gap: 0.5rem;
+  }
+
+  .wrap,
+  .process {
+    min-width: auto;
+    width: 90vw;
+    padding: 0.5rem;
+  }
+
+  #step {
+    top: 95%;
+    font-size: 0.9rem;
+  }
+
+  #manualTask {
+    top: 30px;
+    width: 90vw;
+  }
+
+  .flow {
+    padding: 0.5rem;
+  }
+}
