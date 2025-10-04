@@ -67,7 +67,7 @@ body {
 #manualTask.show {
   display: block;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   body {
     flex-direction: column;
     gap: 0.5rem;
